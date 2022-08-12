@@ -1,3 +1,3 @@
 ## Choding lmaolmao
 
-Pratyush chuitya
+Pratyush chutiya
