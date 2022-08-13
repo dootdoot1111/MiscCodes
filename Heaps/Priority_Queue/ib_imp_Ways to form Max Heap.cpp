@@ -3,6 +3,7 @@ using namespace std;
 
 
 //bc kya hi question hai yeh,kaafi difficult
+//https://www.youtube.com/watch?v=cYhAdbnEq8I
 #define ll long long
 #define M 1000000007
 vector<vector<ll int>>nCrdp(101,vector<ll int>(101,-1));
