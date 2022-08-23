@@ -63,7 +63,7 @@ void player_turn(){
         turn = 'X';
     }else {
         //if input position already filled
-        cout<<"Box already filled!n Please choose another!!nn";
+        cout<<"Box already filled!n Please choose another!!";
         player_turn();
     }
     /* Ends */
