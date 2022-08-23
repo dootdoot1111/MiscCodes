@@ -1,3 +1,13 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+  struct TreeNode {
+      int val;
+      TreeNode *left;
+      TreeNode *right;
+      TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+  };
+
 TreeNode* remove(TreeNode* root)
 {
     // agar passed node hi null hai toh return null
@@ -35,7 +45,7 @@ TreeNode* remove(TreeNode* root)
     //agar dono hi bacche hai toh bhi kuch mat karo
 } 
 
-TreeNode* Solution::solve(TreeNode* A) {
+TreeNode* solve(TreeNode* A) {
     
     return remove(A);
 }
