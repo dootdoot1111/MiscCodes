@@ -60,3 +60,26 @@ bool subsetSumToK(int n,int k,vector<int> &arr){
     }
     return dp[n-1][k];
 }
+
+//last case space optimisation, use two rows prev and curr,instead of a 2d matrix
+//TC memoization, tabulation and space optimised cheezoin mein same hai par SC kam hote jaata hai
+//SC space optimied mein O(target)
+bool subsetSumToK(int n,int k,vector<int> &arr){
+    vector<bool> prev(k+1,false), curr(k+1,false);
+    prev[0]=true, curr[0]=true; 
+    prev[arr[0]]=true;  
+
+    for(int ind=1;ind<n;ind++){
+        for(int target=1;target<=k;target++){
+            bool notTake=prev[target];     //dp[ind-1] is prev
+
+            bool take=false;
+            if(target>=arr[0])
+            take=prev[target-arr[ind]];
+
+            curr[target]=take||notTake;
+        }
+        prev=curr;
+    }
+    return prev[k];
+}
