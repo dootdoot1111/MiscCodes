@@ -74,7 +74,7 @@ bool subsetSumToK(int n,int k,vector<int> &arr){
             bool notTake=prev[target];     //dp[ind-1] is prev
 
             bool take=false;
-            if(target>=arr[0])
+            if(target>=arr[ind])
             take=prev[target-arr[ind]];
 
             curr[target]=take||notTake;
