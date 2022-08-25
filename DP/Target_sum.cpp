@@ -1,6 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+
+//same problem as count partitions with given diff
 int mod =(int)1e9+7;
 
 int findWays(vector<int> &num, int tar){
@@ -27,7 +29,6 @@ int findWays(vector<int> &num, int tar){
     }
     return dp[n-1][tar];
 }
-
 //s1-s2=d; totalsum-2*s2=d; s2=(totalsum-d)/2; toh arr bhej ke check karlo kitne subarrays ka sum s2 hoga and return that
 int countPartitions(int n, int d, vector<int>& arr){
     int totSum = 0;
@@ -39,4 +40,10 @@ int countPartitions(int n, int d, vector<int>& arr){
     if(totSum-d <0 || (totSum-d)%2 ) return 0;
     
     return findWays(arr,(totSum-d)/2);
+}
+
+int targetSum(int n, int target, vector<int>& arr) {
+    // Write your code here.
+    
+    return countPartitions(arr.size(),target,arr);
 }
